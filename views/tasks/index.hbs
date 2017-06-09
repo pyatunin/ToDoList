@@ -1,0 +1,53 @@
+<div class="wrapper">
+    <div class="taskmenu">
+        <div class="status">
+            <a href="/tasks">Текущие</a>
+        </div>
+
+        <div class="status">
+            <a href="/tasks/completed">Завершенные</a>
+        </div>
+    </div>
+
+    <div class="addblock">
+
+        <form action="/tasks" method="post">
+            <div class="item1">
+            </div>
+            <div class="item2">
+                <input type="text" class="addtaskinput" name="task" placeholder="Введите задачу">
+            </div>
+            <div class="item3">
+                <input type="submit" value="✚" class="button done">
+            </div>
+        </form>
+    </div>
+    <div class="tasklist">
+        {{#if tasks}}
+        {{#each tasks}}
+            <div class="item1">
+            <form action="/tasks/{{id}}" method="post" enctype="application/x-www-form-urlencoded">
+                <input type="hidden" value="PUT" name="_method">
+                <input type="hidden" value="true" name="completed">
+                <input type="submit" class="button done" value="✔">
+            </form>
+            </div>
+            <div class="item2">
+                <div class="taskinfo">
+                    {{task}}
+                    {{moment created_at "HH:mm"}}
+                    {{moment created_at "DD/MM/YYYY"}}
+                </div>
+            </div>
+            <div class="item3">
+                <form action="/tasks/{{id}}" method="post" enctype="application/x-www-form-urlencoded">
+                    <input type="hidden" value="DELETE" name="_method">
+                    <input type="submit" class="button del" onclick="return confirmDelete();" value="✖">
+                </form>
+            </div>
+        {{/each}}
+        {{else}}
+
+        {{/if}}
+    </div>
+</div>

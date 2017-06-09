@@ -1,0 +1,24 @@
+{
+  "port": 3000,
+  "mongoose": {
+    "uri": "mongodb://localhost/todolist",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session": {
+    "secret": "sh@10m",
+    "key": "sid",
+    "resave": true,
+    "saveUninitialized": true,
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  }
+}

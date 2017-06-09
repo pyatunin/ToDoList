@@ -1,0 +1,76 @@
+body {
+    background: #e2e1e0;
+}
+.wrapper {
+    display: block;
+    margin: auto;
+    background: #fff;
+    border-radius: 2px;
+    height: 768px;
+    width: 400px;
+    position: relative;
+    padding: 16px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.taskmenu {
+    display: block;
+    margin: auto;
+    background: #fff;
+    width: 100%;
+    padding: 0px 0px 12px;
+    position: relative;
+}
+.status {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0px;
+    width: 49%;
+}
+.addblock {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    background-color: lightgreen;
+    display: block;
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+
+.item1 {
+    display: inline-block;
+    width: 50px;
+}
+.item2 {
+    display: inline-block;
+    width: 290px;
+    padding: 12px 0px;
+    box-sizing: border-box;
+}
+.addtaskinput {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 12px;
+    box-sizing: border-box;
+}
+.item3 {
+    display: inline-block;
+    width: 50px;
+}
+
+.tasklist {
+    display: block;
+    margin: auto;
+    background: #fff;
+    width: 100%;
+    position: relative;
+}
+.taskinfo {
+    word-wrap: break-word;
+    display: inline-block;
+    margin: 10px 12px;
+    width: 100%;
+}
+.tskbtn {
+    border: 1px solid #ccc;
+
+}
